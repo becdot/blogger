@@ -1,6 +1,6 @@
 ###Becca's Blogger!
 
-Hey Hukkster!  I had a lot of fun writing this, and wanted to share some of the things I worked on.
+Hi guys!  I had a lot of fun writing this, and wanted to share some of the things I worked on.
 
 ####Testing
 I used the Django built-in testing framework to test everything, and Django-nose to generate test coverage and ensure that models, views, and urls are all 100% covered.  
