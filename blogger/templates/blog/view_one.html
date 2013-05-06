@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block view_one %}
+<div id='view_one_outer'>
+  <div id='view_one_inner' class='row'>
+    <div class='large-12 columns'>
+      <h4>{{post.title}}</h4>
+      <h5>by {{post.author}}</h5>
+      <h6>{{post.date}}</h6>
+      <p>{{post.content}}</p>
+    </div>
+  </div>
+
+  <div class='sidebar'>
+    <ul class="side-nav">
+      <li><a href={% url blog.views.welcome %}>Home</a></li>
+      <li><a href={% url blog.views.view_recent '10' %}>View all</a></li>
+      {% if next %}
+        <li><a href={% url blog.views.view_post next.id %}>Next Entry</a></li>
+      {% endif %}
+      {% if prev %}
+        <li><a href={% url blog.views.view_post prev.id %}>Previous Entry</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

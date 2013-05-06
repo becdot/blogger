@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block view_all %}
+  {% if posts %}
+  <div id='view_all'>
+    <h3>Viewing most recent posts</h3>
+      <ul class='no-bullet'>
+    	{% for post in posts %}
+        <a href={% url blog.views.view_post post.id %}>
+          <div class='row view_all'>
+            <li class='post_title'><h5>{{post.title}}</h5></li>
+            <p class='post_date'>Published on {{post.date}}</p>
+            <p class='post_content'>{{post.content|truncatewords:50}}</p>
+          </div>
+        </a>
+      {% endfor %}
+      </ul>
+      {% if more %}
+        <a href={% url blog.views.view_recent more %} class="tiny button">View more</a>
+      {% endif %}
+  </div>
+  {% else %}  
+    <h3>No posts here!  Better go write some!</h3>
+  {% endif %}
+{% endblock %}

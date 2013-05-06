@@ -1,0 +1,54 @@
+/*login.html*/
+#login {
+    width: 50%;
+}
+#login_h1 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+#login_h3 {
+    margin-left: 2.2em;
+}
+#login_error {
+    margin-left: 2em;
+    color: red;
+}
+#signup_button {
+    margin-right: 5em;
+    float:right;
+    width: auto;
+}
+#signup_button a {
+    background-color: #11BF08;
+    border-color: #0C9404;
+}
+
+/*signup.html*/
+#signup_error {
+    margin-left: 2em;
+    color: red;
+}
+
+/*view_one.html*/
+.sidebar {
+    float:right;
+    margin-right: 2em;
+}
+#view_one_inner {
+    float: left;
+    margin-left: 8em;
+}
+
+#id_content {
+    height: 400px;
+}
+input.error {
+    color: red;
+}
+#view_all h3 {
+    text-align: center;
+}
+#view_all a{
+    cursor: default;
+}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block welcome %}
+<h3>Welcome, {{username}}!</h3>
+
+<a href='/new' class="large button">Add a new post</a>
+<a href='/view/recent/10' class="large button">View recent posts</a>
+<a href='/logout' class="large button">Logout</a>
+   
+{% endblock %}

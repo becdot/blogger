@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block login %}
+<h1 id='login_h1'>Welcome to Blogger!</h1>
+<!-- <h3 id='login_h3'>Please login</h3>
+ -->
+<div id='signup_button'>
+  <a href='/signup' class='large button'>Signup</a>
+</div>
+
+{% block error %}
+  {% if error %}
+    <h3 id='login_error'>{{error}}</h3>
+  {% endif %}
+{% endblock %}
+
+<div id='login' class='login row'>
+  <form id='login_form' action='/' method='post' autocomplete='on'>{% csrf_token %}
+      <div class="large-6 rows">
+        <label>Username</label>
+        <input type="text" name='username' id='username' autofocus='true' onclick='this.select()'/>
+      </div>
+      <div class="large-6 rows">
+        <label>Password</label>
+        <input type="password" name='password' id='password'/>
+      </div>
+      <div class="submit_button">
+        <button form='login_form' type='submit' class="large button">Login</button>
+      </div>
+  </form>  
+</div>   
+
+
+{% endblock %}

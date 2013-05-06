@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block signup %}
+
+<h1 id='login_h1'>Signup!</h1>
+
+{% block error %}
+  {% if error %}
+    <h3 id='signup_error'>{{error}}</h3>
+  {% endif %}
+{% endblock %}
+
+<div id='signup' class='signup row'>
+  <form id='signup_form' action={% url blog.views.signup %} method='post' autocomplete='off'>{% csrf_token %}
+      <div class="large-6 rows">
+        <label>Username</label>
+        <input type="text" name='username' id='username' autofocus='true' onclick='this.select()'/>
+      </div>
+      <div class="large-6 rows">
+        <label>Password</label>
+        <input type="password" name='password' id='password'/>
+      </div>
+      <div class="submit_button">
+        <button form='signup_form' type='submit' class="large button">Signup</button>
+      </div>
+  </form>  
+</div>   
+
+
+{% endblock %}
